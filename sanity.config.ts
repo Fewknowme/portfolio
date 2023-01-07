@@ -3,20 +3,26 @@
  */
 
 import { visionTool } from '@sanity/vision'
-import { apiVersion, dataset, previewSecretId, projectId } from 'lib/sanity.api'
-import { previewDocumentNode } from 'plugins/previewPane'
-import { productionUrl } from 'plugins/productionUrl'
-import { pageStructure, singletonPlugin } from 'plugins/settings'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
-import page from 'schemas/documents/page'
-import project from 'schemas/documents/project'
-import duration from 'schemas/objects/duration'
-import milestone from 'schemas/objects/milestone'
-import timeline from 'schemas/objects/timeline'
-import home from 'schemas/singletons/home'
-import settings from 'schemas/singletons/settings'
+
+import {
+  apiVersion,
+  dataset,
+  previewSecretId,
+  projectId,
+} from './lib/sanity.api'
+import { previewDocumentNode } from './plugins/previewPane'
+import { productionUrl } from './plugins/productionUrl'
+import { pageStructure, singletonPlugin } from './plugins/settings'
+import page from './schemas/documents/page'
+import project from './schemas/documents/project'
+import duration from './schemas/objects/duration'
+import milestone from './schemas/objects/milestone'
+import timeline from './schemas/objects/timeline'
+import home from './schemas/singletons/home'
+import settings from './schemas/singletons/settings'
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||

@@ -1,11 +1,12 @@
 import { Card, Text } from '@sanity/ui'
-import { resolveHref } from 'lib/sanity.links'
-import { getSecret } from 'plugins/productionUrl/utils'
 import { ComponentProps, Suspense } from 'react'
 import { memo } from 'react'
 import { useClient } from 'sanity'
 import { UserViewComponent } from 'sanity/desk'
 import { suspend } from 'suspend-react'
+
+import { resolveHref } from '../../lib/sanity.links'
+import { getSecret } from '../productionUrl/utils'
 
 /**
  * This component is responsible for rendering a preview of a post inside the Studio.
